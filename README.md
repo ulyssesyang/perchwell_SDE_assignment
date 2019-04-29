@@ -21,7 +21,7 @@ GET /properties/:id | return JSON formatting which reflects ``example_property_l
 * Generate a new project by running
 
 ```(ruby)
-rails new perchwell_assignment --api
+rails new perchwell_SDE_assignment --api
 ```
 
 * Database use default SQLite Database
