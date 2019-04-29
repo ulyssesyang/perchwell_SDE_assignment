@@ -1,5 +1,17 @@
-# Parse sample data and load into database
+# Clear all tables before seed data
+ActiveRecord::Base.establish_connection
+ActiveRecord::Base.connection.tables.each do |table|
+  next if table == 'schema_migrations'
+  puts "Clear all tables"
+  
+  # SQLite
+  ActiveRecord::Base.connection.execute("DELETE FROM #{table}")
 
+  # MySQL and PostgreSQL
+  #ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
+end
+
+# Parse sample data and load into database
 require 'csv'
 
 puts "Load sample_agents.csv"
