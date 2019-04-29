@@ -51,3 +51,13 @@ rails db:migrate
 ```(ruby)
 rails server
 ```
+
+## How to run this project
+
+```()
+git clone this repo: git@github.com:ulyssesyang/perchwell_SDE_assignment.git
+cd perchwell_SDE_assignment
+bundle install
+bundle exec rake db:create db:migrate
+# visit http://localhost:3000
+```
