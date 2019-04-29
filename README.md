@@ -1,24 +1,51 @@
-# README
+# Software Engineering Interview Assignment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## System environment and dependencies
 
-Things you may want to cover:
+* Rails version: 5.2.3
+* Ruby version: 2.4.2 (x86_64-darwin18)
 
-* Ruby version
+## API Endpoints
 
-* System dependencies
+API will expose the following four Restful endpoints as request:
 
-* Configuration
+Endpoint | Functionality
+--- | ---
+GET /agents | return JSON formatting which reflects ``example_agent_list.json``
+GET /agents/:id | return JSON formatting which reflects ``example_agent.json``
+GET /properties | return JSON formatting which reflects ``example_agent_list.json``
+GET /properties/:id | return JSON formatting which reflects ``example_property_list.json``
 
-* Database creation
+## Brief setup instructions
 
-* Database initialization
+* Generate a new project by running
 
-* How to run the test suite
+```(ruby)
+rails new perchwell_assignment --api
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database use default SQLite Database
 
-* Deployment instructions
+* Copy sample sample data into the directory: ``lib/seeds/``
 
-* ...
+* Add Models for ``Agent`` and ``Property`` based on sample data
+
+* Build schema
+
+```(ruby)
+rails db:migrate
+```
+
+* Setup associations between ``Agent`` and ``Property`` (Many_To_Many)
+
+* Migrate sample data into database by running script in the ``db/seeds.rb``
+
+* Add controller for ``Agent`` and ``Property``
+
+* Add helper functions for handling json format response and error exceptions
+
+* Run rails server
+
+```(ruby)
+rails server
+```
