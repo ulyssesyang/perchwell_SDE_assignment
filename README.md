@@ -59,5 +59,6 @@ git clone this repo: git@github.com:ulyssesyang/perchwell_SDE_assignment.git
 cd perchwell_SDE_assignment
 bundle install
 bundle exec rake db:create db:migrate
+rails server
 # visit http://localhost:3000
 ```
