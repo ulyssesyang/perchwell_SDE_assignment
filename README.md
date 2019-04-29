@@ -44,6 +44,8 @@ rails db:migrate
 
 * Add helper functions for handling json format response and error exceptions
 
+* Add routing in the ``routes.rb``
+
 * Run rails server
 
 ```(ruby)

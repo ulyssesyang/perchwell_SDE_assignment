@@ -1,4 +1,4 @@
 class Agent < ApplicationRecord
     # define relatinship with properties
-    has_many :properties, :class_name => "Property", :foreign_key => "agent_email"
+    has_and_belongs_to_many :properties
 end

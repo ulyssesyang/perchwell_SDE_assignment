@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # API will expose the following four Restful endpoints as request
+  resources :agents, only: [:index, :show]
+  resources :properties, only: [:index, :show]
 end
